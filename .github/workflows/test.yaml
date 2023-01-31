@@ -8,6 +8,7 @@ on:
 
   pull_request:
     branches: [ master ]
+    type: [ closed ]
 
 jobs:
   build:
@@ -17,7 +18,7 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-latest, windows-latest, macos-latest]
-        node-version: [18.x]
+        node-version: [18.x, 16.x]
 
     steps:
       - uses: actions/checkout@v3
