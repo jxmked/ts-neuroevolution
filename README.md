@@ -3,9 +3,6 @@
 &nbsp;&nbsp;
 
 [![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
-[![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg?event=issues)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
-[![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg?event=release)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
-[![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg?event=pull_request)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
 ![npm](https://img.shields.io/npm/dm/ts-neuroevolution?style=flat-square)
 
 
