@@ -4,10 +4,10 @@ on:
   push:
     paths-ignore:
       - 'README.md'
-    branches: [ master ]
+    branches: [ xio ]
 
   pull_request:
-    branches: [ master ]
+    branches: [ xio ]
     type: [ closed ]
 
 jobs:
