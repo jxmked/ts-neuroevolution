@@ -1,11 +1,13 @@
 # Neuroevolution in Typescript
 
 &nbsp;&nbsp;
-[![GitHub issues](https://img.shields.io/github/issues/digitsensitive/neuroevolution-typescript.svg)](https://github.com/digitsensitive/neuroevolution-typescript/issues)
-[![GitHub stars](https://img.shields.io/github/stars/digitsensitive/neuroevolution-typescript.svg)](https://github.com/digitsensitive/neuroevolution-typescript/stargazers)
-![Contributions welcome](https://img.shields.io/badge/contributions-welcome-orange.svg)
-[![Code style: prettier](https://img.shields.io/badge/code_style-prettier-ff69b4.svg)](https://github.com/prettier/prettier)
-[![GitHub license](https://img.shields.io/github/license/digitsensitive/neuroevolution-typescript.svg)](https://github.com/digitsensitive/neuroevolution-typescript)
+
+[![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
+[![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg?event=issues)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
+[![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg?event=release)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
+[![Run Test](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml/badge.svg?event=pull_request)](https://github.com/jxmked/ts-neuroevolution/actions/workflows/test.yaml)
+![npm](https://img.shields.io/npm/dm/ts-neuroevolution?style=flat-square)
+
 
 ## Neuroevolution
 
@@ -16,6 +18,9 @@ A main benefit is that neuroevolution can be applied more widely than supervised
 In contrast, neuroevolution requires only a measure of a network's performance at a task. For example, the outcome of a game 
 (i.e. whether one player won or lost) can be easily measured without providing labeled examples of desired strategies.
 
+## Originals
+
+Ts-Neuroevolution is a TypeScript library version of [xviniette](https://github.com/xviniette/FlappyLearning) Neuroevolution.
 
 ## Installation
 
@@ -30,10 +35,6 @@ NPM:
 ```sh
 npm install --save ts-neuroevolution
 ```
-
-## Motivation
-
-This library has been greatly influenced by [xviniette](https://github.com/xviniette/FlappyLearning).
 
 ## Configuration
 
@@ -206,6 +207,13 @@ otherNeuvol = instance.nextGeneration();
 
 ```
 
+## Examples
+
+[FlappyLearning](https://github.com/jxmked/FlappyLearning) - 
+An Implementation of Ts-Neuroevolution with Webpack.
+
+> Tip: You can also use xviniette FlappyLearning version and
+> replace the Neuroevolution with this ts-neuroevolution CDN version
 
 ## Resources
 
@@ -243,10 +251,16 @@ __Builds__
 - `npm run build:node` - Build ES Node Module Version. Output file 'main.js'
 - `npm run build:tsc` - Build Declaration Files. Required for ES Node Modules
 
+__Building for NPM package steps__
+
+- `npm ci`
+- `npm run build` - Build both umd and node version
+- `npm run bud:tsc` - Build TyoeScript types
+
 __Formating__
 
 `npm run prettier-format` - Start formating code from `./src` and `./tests` using `Prettier`
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE.md](https://github.com/digitsensitive/neuroevolution-typescript/blob/master/LICENSE) file for details.
+Under MIT License
