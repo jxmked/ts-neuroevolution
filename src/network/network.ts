@@ -155,9 +155,15 @@ export default class Network {
         // For each Neuron in each layer
         let sum = 0;
 
-        for (let prevLayerNeuronIndex = 0; prevLayerNeuronIndex < prevLayerNeuronLen; prevLayerNeuronIndex++) {
+        for (
+          let prevLayerNeuronIndex = 0;
+          prevLayerNeuronIndex < prevLayerNeuronLen;
+          prevLayerNeuronIndex++
+        ) {
           // Every Neuron in the previous layer is an input to each Neuron in the next layer
-          sum += prevLayer.neurons[prevLayerNeuronIndex].value * currentLayer.neurons[neuronIndex].weights[prevLayerNeuronIndex];
+          sum +=
+            prevLayer.neurons[prevLayerNeuronIndex].value *
+            currentLayer.neurons[neuronIndex].weights[prevLayerNeuronIndex];
         }
 
         currentLayer.neurons[neuronIndex].value = this.activation(sum);

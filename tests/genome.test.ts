@@ -16,5 +16,7 @@ test('Does initiate', () => {
 
 test('Does store values', () => {
   expect(genome.score).toBe(score);
-  expect(flatten(Object.values(genome.network)).sort()).toEqual(flatten(Object.values(network)).sort());
+  expect(flatten(Object.values(genome.network)).sort()).toEqual(
+    flatten(Object.values(network)).sort()
+  );
 });

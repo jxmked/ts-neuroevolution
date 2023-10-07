@@ -17,7 +17,11 @@ export default class Generations {
    * Create the first network generation with populated
    * random values.
    */
-  public firstGeneration(inputNet: number, hiddenLayers: number[], outputNet: number): INetworkData[] {
+  public firstGeneration(
+    inputNet: number,
+    hiddenLayers: number[],
+    outputNet: number
+  ): INetworkData[] {
     const networkData: INetworkData[] = [];
 
     for (let i = 0; i < this.ne.options.population; i++) {
@@ -40,7 +44,8 @@ export default class Generations {
       throw new TypeError('Must call method Generations.firstGeneration() first.');
     }
 
-    const gen: INetworkData[] = this.generations[this.generations.length - 1].generateNextGeneration();
+    const gen: INetworkData[] =
+      this.generations[this.generations.length - 1].generateNextGeneration();
     this.generations.push(new Generation(this.ne));
     return gen;
   }

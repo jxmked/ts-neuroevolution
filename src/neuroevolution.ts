@@ -129,7 +129,10 @@ class Neuroevolution {
     if (this.options.historic !== -1) {
       /* Remove older generations */
       if (currentGeneration.length > this.options.historic + 1) {
-        currentGeneration.splice(0, currentGeneration.length - (this.options.historic + 1));
+        currentGeneration.splice(
+          0,
+          currentGeneration.length - (this.options.historic + 1)
+        );
       }
     }
 

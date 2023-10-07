@@ -178,7 +178,8 @@ export default class Generation {
        * */
       for (let i = 0; i < childGenome.network.weights.length; i++) {
         if (Math.random() <= mutationRate) {
-          childGenome.network.weights[i] += Math.random() * mutationRate * 2 - mutationRate;
+          childGenome.network.weights[i] +=
+            Math.random() * mutationRate * 2 - mutationRate;
         }
       }
 
@@ -228,7 +229,8 @@ export default class Generation {
        * */
       for (let i = 0; i < childGenome.network.weights.length; i++) {
         if (Math.random() <= mutationRate) {
-          childGenome.network.weights[i] += Math.random() * mutationRate * 2 - mutationRate;
+          childGenome.network.weights[i] +=
+            Math.random() * mutationRate * 2 - mutationRate;
         }
       }
 

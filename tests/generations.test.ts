@@ -34,7 +34,11 @@ test('Throw an error', () => {
 test('Generate the first generation', () => {
   const [input, hiddens, output] = options.network;
 
-  const firstGenData = generations.firstGeneration(input as number, hiddens as number[], output as number);
+  const firstGenData = generations.firstGeneration(
+    input as number,
+    hiddens as number[],
+    output as number
+  );
 
   for (const networkData of firstGenData) {
     expect(flatten(networkData.neurons)).toEqual(flatten(options.network));
@@ -49,7 +53,11 @@ test('Generate the first generation', () => {
 test('Generate the second generation', () => {
   const [input, hiddens, output] = options.network;
 
-  const secondGenData = generations.firstGeneration(input as number, hiddens as number[], output as number);
+  const secondGenData = generations.firstGeneration(
+    input as number,
+    hiddens as number[],
+    output as number
+  );
 
   for (const networkData of secondGenData) {
     expect(flatten(networkData.neurons)).toEqual(flatten(options.network));
