@@ -1,16 +1,22 @@
 import commonjs from '@rollup/plugin-commonjs';
+import url from 'url';
 import json from '@rollup/plugin-json';
 import resolve from '@rollup/plugin-node-resolve';
 import typescript from '@rollup/plugin-typescript';
 import summary from 'rollup-plugin-summary';
-import pkg from './package.json' assert { type: 'json' };
 import terser from '@rollup/plugin-terser';
 import rimraf from 'rimraf';
 import fs from 'fs';
+import path from "path";
 import { minify as uglify } from 'uglify-js';
 
-const devMode = process.env.mode !== 'production';
+const __filename = url.fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
+const __read_file__ = fs.readFileSync(path.join(__dirname, './package.json'), { encoding: "utf8" });
+const pkg = JSON.parse(__read_file__);
+
+const devMode = process.env.mode !== 'production';
 const name = 'Neuroevolution';
 
 /**
@@ -53,13 +59,13 @@ export default (cli_args) => {
     treeshake: !devMode,
     plugins: [
       !devMode &&
-        !isTermuxEnv &&
-        terser({
-          format: {
-            comments: false
-          },
-          compress: false
-        }),
+      !isTermuxEnv &&
+      terser({
+        format: {
+          comments: false
+        },
+        compress: false
+      }),
 
       typescript(),
       json(),
